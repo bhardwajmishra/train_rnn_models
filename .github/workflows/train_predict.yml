@@ -31,7 +31,7 @@ jobs:
           git config user.email "actions@github.com"
           git add models || echo "No models folder found."
           git commit -m "Add trained models and related artifacts" || echo "Nothing to commit."
-          git push || echo "Nothing to push."
+          git push -f || echo "Nothing to push."
 
   predict:
     runs-on: ubuntu-latest
@@ -59,4 +59,4 @@ jobs:
           git config user.email "actions@github.com"
           git add predictions || echo "No predictions folder found."
           git commit -m "Add prediction results" || echo "Nothing to commit."
-          git push || echo "Nothing to push."
+          git push -f || echo "Nothing to push."
